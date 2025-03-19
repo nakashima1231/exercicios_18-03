@@ -1,32 +1,71 @@
 #include <stdio.h>
 
 int main() {
-    int contador = 1; 
-    int lado1;
-    int lado2;
-    int lado3;
-    int hipo = 0;
-    int hipo2 = 0;
-    
-    while(contador != -1) {
-        printf("Digite o valor do lado 1: ");
-        scanf("%d", &lado1);
-        printf("Digite o valor do lado 2: ");
-        scanf("%d", &lado2);
-        printf("Digite o valor do lado 3: ");
-        scanf("%d", &lado3);
-        
-        if (lado1 > lado 2) {
-            if(lado1 > lado 3) {
-               
+    char resp;
+    int a, b, c;
+    int hipo, cat;
+
+    printf("quer comparar? [s/n]: ");
+    scanf("%c", &resp);
+
+    while (resp == 's') {
+        printf("digite o valor a: ");
+        scanf("%d", &a);
+        printf("digite o valor b: ");
+        scanf("%d", &b);
+        printf("digite o valor c: ");
+        scanf("%d", &c);
+
+        if (a + b > c) {
+            if (b + c > a) {
+                if (a + c > b) {
+                    
+                    if (a > b) {
+                        if (a > c) {
+                            hipo = a * a;
+                            cat = b * b + c * c;
+                            if (hipo == cat) {
+                                printf("é possivel formar um triangulo retangulo\n");
+                            } else {
+                                printf("nao é possivel formar um triangulo retangulo\n");
+                            }
+                        }
+                    }
+                    if (b > a) {
+                        if (b > c) {
+                            hipo = b * b;
+                            cat = a * a + c * c;
+                            if (hipo == cat) {
+                                printf("é possivel formar um triangulo retangulo\n");
+                            } else {
+                                printf("nao é possivel formar um triangulo retangulo\n");
+                            }
+                        }
+                    }
+                    if (c > a) {
+                        if (c > b) {
+                            hipo = c * c;
+                            cat = a * a + b * b;
+                            if (hipo == cat) {
+                                printf("é possivel formar um triangulo retangulo\n");
+                            } else {
+                                printf("nao é possivel formar um triangulo retangulo\n");
+                            }
+                        }
+                    }
+                } else {
+                    printf("nao é possivel formar um triangulo\n");
+                }
+            } else {
+                printf("nao é possivel formar um triangulo\n");
             }
+        } else {
+            printf("nao é possivel formar um triangulo\n");
         }
         
-        
-        
-        
-        printf("quer continuar?(digite -1 caso queira parar): ");
-        scanf("%d", &contador);
+        printf("quer comparar? [s/n]: ");
+        scanf(" %c", &resp);
     }
+
     return 0;
 }
