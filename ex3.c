@@ -1,16 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    char resp;
+    int resp;
     int a, b, c;
     int hipo, cat;
 
-    printf("quer comparar? [s/n]: ");
-    scanf("%c", &resp);
+    printf("digite o valor de a [-1 para sair]: ");
+    scanf("%d", &resp);
 
-    while (resp == 's') {
-        printf("digite o valor a: ");
-        scanf("%d", &a);
+    while (resp != -1) {
+        a = resp;
+        
         printf("digite o valor b: ");
         scanf("%d", &b);
         printf("digite o valor c: ");
@@ -63,8 +63,8 @@ int main() {
             printf("nao é possivel formar um triangulo\n");
         }
         
-        printf("quer comparar? [s/n]: ");
-        scanf(" %c", &resp);
+        printf("digite o valor de a [-1 para sair]: ");
+        scanf(" %d", &resp);
     }
 
     return 0;
