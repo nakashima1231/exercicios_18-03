@@ -10,15 +10,15 @@ int main() {
     scanf("%d", &contador);
     
     while (contador != -5) {
-        nota = nota + contador;
+        nota += contador;
         printf("Digite um número (-5 para encerrar): ");
         scanf("%d", &contador);
         
-        median = median + 1;
+        median += 1;
     }
     
     media = nota / median;
-    printf("%f", nota);
+    printf("%f\n", nota);
     printf("Sua média é: %f", media);
     
     return 0;
